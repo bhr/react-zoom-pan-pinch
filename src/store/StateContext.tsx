@@ -613,7 +613,7 @@ class StateProvider extends Component<StateContextProps, StateContextState> {
         const startTime = new Date().getTime();
         const maxTimeWait = 2000;
         let interval = setInterval(() => {
-          if (wrapperComponent.offsetWidth) {
+          if (wrapperComponent && wrapperComponent.offsetWidth) {
             const bounds = handleCalculateBounds.call(this, scale, false);
             this.stateProvider.positionX = bounds.minPositionX;
             this.stateProvider.positionY = bounds.minPositionY;
